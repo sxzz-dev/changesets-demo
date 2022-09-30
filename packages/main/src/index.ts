@@ -1,2 +1,2 @@
 const featureA = []
-const featureB = []
+const featureB = ["updated"]
