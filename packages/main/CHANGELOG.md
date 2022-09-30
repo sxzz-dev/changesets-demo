@@ -1,5 +1,11 @@
 # main
 
+## 2.0.0
+
+### Major Changes
+
+- [`f31c94a`](https://github.com/sxzz/changesets-demo/commit/f31c94ad4d804b1af0bc7523df1d61ed9facba63) Thanks [@sxzz](https://github.com/sxzz)! - fix feature A 修复 feature A
+
 ## 1.1.2
 
 ### Patch Changes
