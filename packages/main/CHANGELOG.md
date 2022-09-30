@@ -1,5 +1,11 @@
 # main
 
+## 2.0.1
+
+### Patch Changes
+
+- [#7](https://github.com/sxzz-dev/changesets-demo/pull/7) [`3650898`](https://github.com/sxzz-dev/changesets-demo/commit/36508982e85d8a792f3ca15b3cc1891a0ccb78b4) Thanks [@sxzz](https://github.com/sxzz)! - fix feature A
+
 ## 2.0.0
 
 ### Major Changes
