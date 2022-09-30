@@ -14,6 +14,11 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_PUBLISH_TOKEN }}" > .npmrc
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -32,9 +37,10 @@ jobs:
         uses: changesets/action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          commit: 'chore: update versions'
+          title: 'chore: update versions'
 
-      - name: Gen npmrc
+      - name: Publish
         if: steps.changesets.outputs.hasChangesets == 'false'
-        run: |
-          echo "//registry.npmjs.com/:_authToken=${{ secrets.NPM_PUBLISH_TOKEN }}" >> ./.npmrc
-          pnpm publish
+        run: pnpm changeset publish
